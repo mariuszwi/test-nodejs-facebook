@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel serve src/index.html"
+  },
+  "dependencies": {
+    "parcel": "^1.12.1"
+  }
+}
