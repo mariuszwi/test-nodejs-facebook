@@ -1,1 +1,3 @@
-console.log("Works!!!!!!!!!!!!!!!");
+import { fetchPostList } from './services/post-list.js'
+
+fetchPostList();
