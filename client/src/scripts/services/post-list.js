@@ -1,5 +1,5 @@
 export function fetchPostList() {
-    fetch("/post-list.json")
+    fetch("http://localhost:3000")
     .then((response) => {
         return response.json();
     })
