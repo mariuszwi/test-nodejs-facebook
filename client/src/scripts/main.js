@@ -1,3 +1,3 @@
-import { fetchPostList } from './services/post-list.js'
+const { fetchPostList } = require('./services/post-list.js');
 
 fetchPostList();

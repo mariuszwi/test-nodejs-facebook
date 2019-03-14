@@ -1,4 +1,4 @@
-export function fetchPostList() {
+function fetchPostList() {
     fetch("http://localhost:3000")
     .then((response) => {
         return response.json();
@@ -6,4 +6,8 @@ export function fetchPostList() {
     .then((postList) => {
         console.log(postList);
     });
+}
+
+module.exports = {
+    fetchPostList
 }

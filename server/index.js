@@ -1,19 +1,23 @@
-const http = require("http");
+const express = require("express");
+const cors = require("cors");
 
-const server = http.createServer((req, res) => {
+const app = express();
+
+app.use(cors());
+
+app.get('/', (req, res) => {
     console.log("URL: " + req.url);
 
     const postList = [
         {body: "post 1"},
         {body: "post 2"},
-        {body: "post 3"}
-    ]
+        {body: "post 3"},
+        {body: "post 4"}
+    ];
 
-    res.end(
-        JSON.stringify(postList)
-    );
+    res.json(postList)
 });
 
-server.listen(3000, () => {
+app.listen(3000, () => {
     console.log("server works!");
 })
