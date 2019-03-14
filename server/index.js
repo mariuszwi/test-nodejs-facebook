@@ -9,10 +9,15 @@ app.get('/', (req, res) => {
     console.log("URL: " + req.url);
 
     const postList = [
-        {body: "post 1"},
-        {body: "post 2"},
-        {body: "post 3"},
-        {body: "post 4"}
+        {title: "post 1",
+        text: "text 1"
+        },
+        {title: "post 2",
+        text: "text 2"
+        },
+        {title: "post 3",
+        text: "text 3"
+        }
     ];
 
     res.json(postList)

@@ -1,4 +1,4 @@
 [
-    {"body": "post 1"},
-    {"body": "post 2"}
+    {"post": "post 1"},
+    {"post": "post 2"}
 ]
