@@ -1,8 +1,8 @@
 function fetchPostList() {
-    return fetch("http://localhost:3000")
-    .then((response) => {
-        return response.json();
-    })
+    return fetch('/posts')
+        .then((response) => {
+            return response.json();
+        });
 }
 
 module.exports = {
