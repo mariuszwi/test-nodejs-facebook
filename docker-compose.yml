@@ -3,11 +3,15 @@ version: "3"
 services:
   server-service:
     build: "./server"
+    volumes: 
+      - ./client:/home/node/app
     ports:
       - 8001:3000
 
   client-service:
     build: "./client"
+    volumes: 
+      - ./server:/home/node/app
     ports:
       - 8000:3001
     depends_on:

@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
+require('dotenv').config({path: "./config/server.env"});
+
 const app = express();
 
 app.use(cors());
@@ -23,6 +25,6 @@ app.get('/', (req, res) => {
     res.json(postList)
 });
 
-app.listen(3000, () => {
-    console.log("server works!");
+app.listen(process.env.PORT, () => {
+    console.log(`erver started on http://localhost:${process.env.PORT}`);
 })

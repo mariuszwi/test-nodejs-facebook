@@ -1,5 +1,7 @@
 const express = require("express");
 
+require('dotenv').config({path: "./config/client.env"});
+
 const app = express();
 
 app.use("/", express.static("./dist"));
@@ -15,7 +17,7 @@ app.get('/posts',(reg, res)=> {
     });
 });
 
-app.listen(3001, (err) => {
+app.listen(process.env.PORT, (err) => {
     if (err) throw err;
-    console.log("Server was started");
+    console.log(`Server works on htt://localhost:${process.env.PORT}`);
 });
